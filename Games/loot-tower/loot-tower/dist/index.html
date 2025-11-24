@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Loot Tower</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="game">
+  <h1 class="title">Dungeon Doors</h1>
+
+  <div class="top-bar">
+    <div>Floor: <span id="floor"></span></div>
+    <div>HP: <span id="hp"></span> / <span id="maxHp"></span></div>
+    <div>Power: <span id="power"></span></div>
+    <div>Gold: <span id="gold"></span></div>
+  </div>
+
+  <div class="status-box">
+    <h2 id="statusTitle"></h2>
+    <p id="statusText"></p>
+  </div>
+
+  <div id="doors" class="doors">
+    <button class="door" data-door="0">Door 1</button>
+    <button class="door" data-door="1">Door 2</button>
+    <button class="door" data-door="2">Door 3</button>
+  </div>
+
+  <div class="controls">
+    <button id="nextFloor" class="btn secondary">Next Floor</button>
+    <button id="restart" class="btn danger">Restart</button>
+  </div>
+
+  <div id="combat" class="panel" style="display:none;">
+    <h3 id="combatTitle"></h3>
+    <div id="combatLog" class="log-box"></div>
+    <div class="combat-buttons">
+      <button id="attackMonster" class="btn">Attack</button>
+      <button id="defendMonster" class="btn secondary">Defend</button>
+      <button id="useItem" class="btn">Use Item</button>
+    </div>
+  </div>
+
+  <div class="panel gear-inv">
+    <div>
+      <h4>Gear</h4>
+      <p>Weapon: <span id="weaponName"></span> (+<span id="weaponPower"></span>)</p>
+      <p>Armor: <span id="armorName"></span> (+<span id="armorHP"></span> HP)</p>
+    </div>
+    <div>
+      <h4>Inventory</h4>
+      <div class="inv-row">
+        <button class="inv-slot btn small"></button>
+        <button class="inv-slot btn small"></button>
+        <button class="inv-slot btn small"></button>
+      </div>
+      <small>Click an item in combat or use via "Use Item" prompt.</small>
+    </div>
+  </div>
+
+  <div id="merchant" class="panel" style="display:none;">
+    <h3>Merchant</h3>
+    <div id="merchantItems" class="merchant-items"></div>
+    <button id="leaveMerchant" class="btn secondary small">Leave Merchant</button>
+  </div>
+
+  <div id="log" class="log-box main-log"></div>
+
+  <div id="leaderboard" class="panel leaderboard"></div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
